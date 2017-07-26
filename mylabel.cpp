@@ -25,10 +25,9 @@ MyLabel::MyLabel(QString image,QWidget *parent):QLabel(parent)
 void MyLabel::paintEvent(QPaintEvent *)
 {
     //qDebug("[%s:%s:%d] ",__FILE__,__func__, __LINE__);
-    this->resize(95,95);
     QPainter painter(this);
-    //painter.drawPixmap(rect(),QPixmap(":/image/image/safe.png"));
-    painter.drawPixmap(rect(),m_pixmapList.at(m_index));
+    QPixmap pm = m_pixmapList.at(m_index);
+    painter.drawPixmap(0,0,pm.width(),pm.height(),pm);
 }
 
 void MyLabel::slotValuechange(QVariant var)
