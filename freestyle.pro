@@ -8,7 +8,8 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = ice-test
+TARGET = freestyle
+#TARGET = ice-test
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
