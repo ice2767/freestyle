@@ -12,7 +12,7 @@
 #include <QPushButton>
 
 #include "mylabel.h"
-
+#include "splitterwidget.h"
 
 class MainWindow : public QMainWindow
 {
@@ -24,6 +24,7 @@ public:
 
 public slots:
     void slot_m_button_click();
+    void slot_m_splitterButton_click();
 protected:
     bool m_bAnimationStart;
 
@@ -33,12 +34,15 @@ protected:
     MyLabel *m_myLabel;
 
     QPushButton *m_button;
+    QPushButton *m_splitterButton;
 
     QVBoxLayout *m_verticalLayout;
     QGridLayout *m_gridLayout;
     QHBoxLayout *m_hLayout;
 
     QWidget *m_MyWidget;
+    SplitterWidget *m_splitterWin;
+
 };
 
 #endif // MAINWINDOW_H

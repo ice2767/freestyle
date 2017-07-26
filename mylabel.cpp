@@ -18,6 +18,7 @@ MyLabel::MyLabel(QString image,QWidget *parent):QLabel(parent)
     m_animation->setLoopCount(-1);
     connect(m_animation,SIGNAL(valueChanged(QVariant)),this,SLOT(slotValuechange(QVariant)));
 
+
     //m_animation->start();
 }
 

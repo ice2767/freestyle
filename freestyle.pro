@@ -26,10 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    mylabel.cpp
+    mylabel.cpp \
+    splitterwidget.cpp
 
 HEADERS  += mainwindow.h \
-    mylabel.h
+    mylabel.h \
+    splitterwidget.h
 
 RESOURCES += \
     icon.qrc
