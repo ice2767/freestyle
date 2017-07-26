@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/safe.png</file>
+        <file>image/safe_Hover.png</file>
+    </qresource>
+</RCC>
