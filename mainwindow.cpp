@@ -8,38 +8,36 @@ MainWindow::MainWindow(QWidget *parent)
 #if 1
     m_MyWidget = new QWidget(this);
 
-#if 0
+#if 1
     m_verticalLayout = new QVBoxLayout(m_MyWidget);
 #else
     m_gridLayout = new QGridLayout(m_MyWidget);
 #endif
-
     m_myLabel = new MyLabel(":/image/safe_Hover.png");
+
     //m_myLabel->show();
     qDebug("[%s:%s:%d] ",__FILE__,__func__, __LINE__);
 
-
     m_button = new QPushButton();
     m_button->setText("start");
-
 
     m_splitterButton = new QPushButton();
     m_splitterButton->setText(QObject::tr("Splitter Test"));
 
     qDebug("[%s:%s:%d] ",__FILE__,__func__, __LINE__);
-#if 0
-    m_verticalLayout->addWidget(m_myLabel);
+#if 1
+    m_verticalLayout->addWidget(m_myLabel,0,Qt::AlignCenter);
     m_verticalLayout->addWidget(m_button);
+    m_verticalLayout->addWidget(m_splitterButton);
+
     m_MyWidget->setLayout(m_verticalLayout);
 #else
+    m_gridLayout->addWidget(m_myLabel,0,Qt::AlignCenter);
     m_gridLayout->addWidget(m_button);
     m_gridLayout->addWidget(m_splitterButton);
-    m_gridLayout->addWidget(m_myLabel);
-
     m_MyWidget->setLayout(m_gridLayout);
 #endif
     this->setCentralWidget(m_MyWidget);
-
 
     connect(m_splitterButton,SIGNAL(clicked()),this,SLOT(slot_m_splitterButton_click()));
     connect(m_button,SIGNAL(clicked()),this,SLOT(slot_m_button_click()));
